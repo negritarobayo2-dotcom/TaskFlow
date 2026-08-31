@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Poppins', system-ui, sans-serif;
+
+  --color-primary: #1A3A5C;
+  --color-primary-hover: #152E4A;
+  --color-secondary: #2EC4B6;
+  --color-secondary-hover: #26A99C;
+  --color-accent: #FF6B35;
+  --color-accent-hover: #E55A24;
+  --color-surface: #F7F9FC;
+  --color-card: #FFFFFF;
+  --color-text-base: #1A2332;
+  --color-text-muted: #6B7A8D;
+  --color-text-light: #9DAABA;
+  --color-border: #E2E8F0;
+  --color-border-light: #EDF2F7;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-surface);
+  color: var(--color-text-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide scrollbar until hover */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-light);
+}
+
+/* Input focus rings */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 0;
+}
+
+/* Smooth transitions */
+button {
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(46, 196, 182, 0.3); }
+  50% { box-shadow: 0 0 0 6px rgba(46, 196, 182, 0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease forwards;
+}
+
+.timer-pulse {
+  animation: pulseGlow 2s infinite;
+}

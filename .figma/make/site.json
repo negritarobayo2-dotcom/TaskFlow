@@ -1,0 +1,10 @@
+{
+  "description": "Manage projects, track time, oversee teams, and automate invoicing with a modern, responsive platform designed for freelancers and small agencies.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
